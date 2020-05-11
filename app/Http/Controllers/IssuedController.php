@@ -7,11 +7,11 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Request;
 
-class AcquiredTransactionsController extends Controller
+class IssuedController extends Controller
 {
 
     public function view(){
-        return view('acquired.view');
+        return view('issued.view');
     }
 
     public  function display(Request $request){
@@ -22,7 +22,7 @@ class AcquiredTransactionsController extends Controller
          }
         try {
             $client = new Client();
-            $result = $client->post('http://144.91.64.119:9002/tapswitch/acquirer/period', [
+            $result = $client->post('http://144.91.64.119:9002/tapswitch/issuer/period', [
                 'headers' => [
                     'Authorization' =>$_SESSION["token"],
                     'Content-type' => 'application/json',],
@@ -43,7 +43,7 @@ class AcquiredTransactionsController extends Controller
              }
 
 
-           return view('acquired.display')->with('records',$nullResponse->content);
+           return view('issued.display')->with('records',$nullResponse->content);
         }catch (\Exception $exception){
             return $exception;
             session()->flash('acq_message', 'Failed to process request please contact system administrator.');

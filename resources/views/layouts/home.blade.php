@@ -77,11 +77,11 @@
         <hr class="sidebar-divider my-0">
         <li class="nav-item">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#dash" aria-expanded="true" aria-controls="collapseTwo">
-                <span>Acquired Transactions</span>
+                <span>Acquired Reports</span>
             </a>
             <div id="dash" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Acquired Transactions</h6>
+                    <h6 class="collapse-header">Acquired Reports</h6>
                     <a class="collapse-item" href="/acquired/search">View Transactions</a>
                 </div>
             </div>
@@ -90,12 +90,12 @@
 
         <!-- Sidebar Toggler (Sidebar) -->
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#dash1" aria-expanded="true" aria-controls="collapseTwo">
-                <span>Issued Transactions</span>
+                <span>Issued Reports</span>
             </a>
             <div id="dash1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Issued Transactions</h6>
-                    <a class="collapse-item" href="/order/order">View Transactions</a>
+                    <h6 class="collapse-header">Issued Reports</h6>
+                    <a class="collapse-item" href="/issued/search">View Transactions</a>
                 </div>
             </div>
             <hr class="sidebar-divider my-0">

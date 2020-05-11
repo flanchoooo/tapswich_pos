@@ -45,7 +45,7 @@ class LoginController extends Controller
     public function login(Request $request)
     {
 
-
+        session_start();
         try {
             $client = new Client();
             $result = $client->post('http://144.91.64.119:9000/useroperations/login', [
@@ -56,10 +56,10 @@ class LoginController extends Controller
                 ],
             ]);
             $records = $result->getBody()->getContents();
-            // If the class is using the ThrottlesLogins trait, we can automatically throttle
-            // the login attempts for this application. We'll key this by the username and
-            // the IP address of the client making these requests into this application.
-            if (method_exists($this, 'hasTooManyLoginAttempts') &&
+            $results = json_decode($records);
+            $_SESSION["token"] = 'bearer '.$results->access_token;
+            $_SESSION["username"] =$request->email;
+           if (method_exists($this, 'hasTooManyLoginAttempts') &&
                 $this->hasTooManyLoginAttempts($request)) {
                 $this->fireLockoutEvent($request);
 
@@ -68,10 +68,7 @@ class LoginController extends Controller
             if ($this->attemptLogin($request)) {
                 return $this->sendLoginResponse($request);
             }
-            // If the login attempt was unsuccessful we will increment the number of attempts
-            // to login and redirect the user back to the login form. Of course, when this
-            // user surpasses their maximum number of attempts they will get locked out.
-            $this->incrementLoginAttempts($request);
+          $this->incrementLoginAttempts($request);
             return $this->sendFailedLoginResponse($request);
         }catch (\Exception $exception){
             if($exception->getCode() == 500){

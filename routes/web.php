@@ -121,6 +121,8 @@ Route::any('/dealer/reports','DealerController@reports');
 Route::any('/acquired/search','AcquiredTransactionsController@view');
 Route::any('/acquired/display','AcquiredTransactionsController@display');
 
+Route::any('/issued/search','IssuedController@view');
+Route::any('/issued/display','IssuedController@display');
 
 
 

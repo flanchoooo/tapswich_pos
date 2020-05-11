@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="VinaLabs">
+  <component name="PublishConfigData" serverName="Tapswitch">
     <serverData>
-      <paths name="VinaLabs">
+      <paths name="Tapswitch">
         <serverdata>
           <mappings>
-            <mapping deploy="/var/www/html/direct_debits" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/var/www/html/tapswitch.tapcard.co.zw" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
