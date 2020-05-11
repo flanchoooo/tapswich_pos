@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Authorizations</h4>
+                        <h4 class="card-title">Search Results</h4>
                         <hr>
 
                         @php
@@ -17,7 +17,6 @@
 
                             }
                         @endphp
-                        <a href="{{route('upload_file')}}"><label>Upload File</label></a>
                         <br>
                         <br>
                         <div class="table-responsive">
@@ -31,10 +30,6 @@
                                         <th>Narration</th>
                                         <th>Reference</th>
                                         <th>Created</th>
-                                        <th></th>
-                                        <th></th>
-
-
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -47,22 +42,6 @@
                                             <td>{{$values->narration}}</td>
                                             <td>{{$values->bulk_reference}}</td>
                                             <td>{{$values->created_at}}</td>
-                                            <td>
-                                                <form role="form" action="/bulk/decline" method="POST">
-                                                    @csrf
-                                                    <input type="hidden" class="form-control"  placeholder="Company Name" value="{{$values->id}}"  name="id" >
-                                                    <div style="text-align: center;"><button type="submit" class="btn btn-outline-primary">   {{ __('DECLINE') }}</button></div>
-                                                </form>
-                                            </td>
-
-                                            <td>
-                                                <form role="form" action="/bulk/authorize" method="POST">
-                                                    @csrf
-                                                    <input type="hidden" class="form-control"  placeholder="Company Name" value="{{$values->id}}"  name="id" >
-                                                    <div style="text-align: center;"><button type="submit" class="btn btn-outline-primary">   {{ __('AUTHORIZE') }}</button></div>
-                                                </form>
-                                            </td>
-                                        </tr>
                                     @endforeach
                                     </tbody>
                                 </table>

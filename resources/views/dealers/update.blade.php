@@ -13,7 +13,7 @@
                         <div class="col-lg-12">
                             <div class="p-5">
                                 <div class="text-lg-left">
-                                    <h1 class="h4 text-gray-900 mb-4">Update Vehicle Profile</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Update Company Profile</h1>
                                     <hr>
                                     @if ($flash = session('error'))
                                         <div style="text-align: center;"/>
@@ -30,35 +30,45 @@
 
                                 </div>
 
-                                <form method="POST" action="/fleet/update">
+                                <form method="POST" action="/companies/update">
                                     @csrf
                                     <div class="box-body">
-                                        <input type="text" class="form-control input-default" name="id" value="{{$records->id}}" placeholder=Make required hidden>
                                         <div class="form-group row">
-                                            <div class="col-lg-6">
+                                            <div class="col-lg-6" hidden>
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control input-default" name="make" value="{{$records->make}}" placeholder=Make required>
+                                                    <input type="text" class="form-control input-default" name="id" value="{{$records->id}}" placeholder=" Name" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control input-default" name="model" value="{{$records->model}}" placeholder="Model" required>
+                                                    <input type="text" class="form-control input-default" name="company_name" value="{{$records->company_name}}" placeholder="Company Name" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control input-default" name="registration_number" value="{{$records->registration_number}}" placeholder="Registration Number" required>
+                                                    <input type="email" class="form-control input-default" name="email" value="{{$records->email}}" placeholder="Email" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-lg-6">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control input-default" name="color" value="{{$records->color}}" placeholder="Colour" required>
+                                                    <input type="tel" class="form-control input-default" name="telephone" value="{{$records->telephone}}" placeholder="Telephone"  minlength="12" required>
                                                 </div>
                                             </div>
 
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control input-default" name="company_registration_number" value="{{$records->company_registration_number}}" placeholder="Registration Number" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control input-default" name="external_reference" value="{{$records->external_reference}}" placeholder="Tax Clearance" required>
+                                                </div>
+                                            </div>
                                         </div>
                                         <!-- /.box-body -->
                                         <button type="submit" class="btn btn-primary">   {{ __('Submit') }}</button>
