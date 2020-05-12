@@ -36,7 +36,7 @@
                                             <td hidden>{{$values->posType}}</td>
                                             <td>
                                                 @php
-                                                  echo substr($values->transactionDate,10,18)
+                                                    echo $values->transactionDate;
                                                 @endphp
                                             </td>
                                             <td>{{$values->transactionType}}</td>

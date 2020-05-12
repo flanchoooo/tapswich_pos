@@ -30,8 +30,8 @@ class IssuedController extends Controller
                     'username'    =>  $_SESSION["username"],
                     'fromDate'    => $request->start_date,
                     'toDate'      => $request->end_date,
-                    'page'        => "1",
-                    'size'        => "10",
+                    'page'        => "10",
+                    'size'        => "100",
                 ],
             ]);
 
@@ -45,7 +45,6 @@ class IssuedController extends Controller
 
            return view('issued.display')->with('records',$nullResponse->content);
         }catch (\Exception $exception){
-            return $exception;
             session()->flash('acq_message', 'Failed to process request please contact system administrator.');
             return redirect()->back();
         }

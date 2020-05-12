@@ -30,8 +30,8 @@ class SettlementController extends Controller
                     'username'    =>  $_SESSION["username"],
                     'fromDate'    => $request->start_date,
                     'toDate'      => $request->end_date,
-                    'page'        => "1",
-                    'size'        => "10",
+                    'page'        => "10",
+                    'size'        => "100",
                 ],
             ]);
 
@@ -41,11 +41,8 @@ class SettlementController extends Controller
                 session()->flash('acq_message', 'No search result');
                 return redirect()->back();
              }
-
-
            return view('settlement.display')->with('records',$nullResponse->content);
         }catch (\Exception $exception){
-            return $exception;
             session()->flash('acq_message', 'Failed to process request please contact system administrator.');
             return redirect()->back();
         }
