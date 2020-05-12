@@ -30,8 +30,8 @@ class AcquiredTransactionsController extends Controller
                     'username'    =>  $_SESSION["username"],
                     'fromDate'    => $request->start_date,
                     'toDate'      => $request->end_date,
-                    'page'        => "10",
-                    'size'        => "100",
+                    'page'        => 0,
+                    'size'        => 100,
                 ],
             ]);
 
