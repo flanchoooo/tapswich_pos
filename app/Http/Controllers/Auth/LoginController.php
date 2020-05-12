@@ -59,17 +59,8 @@ class LoginController extends Controller
             $results = json_decode($records);
             $_SESSION["token"] = 'bearer '.$results->access_token;
             $_SESSION["username"] =$request->email;
-           if (method_exists($this, 'hasTooManyLoginAttempts') &&
-                $this->hasTooManyLoginAttempts($request)) {
-                $this->fireLockoutEvent($request);
 
-                return $this->sendLockoutResponse($request);
-            }
-            if ($this->attemptLogin($request)) {
-                return $this->sendLoginResponse($request);
-            }
-          $this->incrementLoginAttempts($request);
-            return $this->sendFailedLoginResponse($request);
+            return redirect('/acquired/search');
         }catch (\Exception $exception){
             if($exception->getCode() == 500){
                 session()->flash('login', 'Invalid login credentials');
