@@ -36,16 +36,6 @@
                         "extend":"excel",
                         "text":"Excel",
                         "className":"btn btn-primary"
-                    },{
-                        "extend":"print",
-                        "text":"PDF",
-                        "className":"btn btn-primary"
-                    },
-
-                    {
-                        "extend":"copy",
-                        "text":"Copy",
-                        "className":"btn btn-primary"
                     },
                 ]
             } );
@@ -100,6 +90,16 @@
             </div>
             <hr class="sidebar-divider my-0">
 
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#dash_" aria-expanded="true" aria-controls="collapseTwo">
+                <span>Net Settlement Reports</span>
+            </a>
+            <div id="dash_" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Net Settlement Reports</h6>
+                    <a class="collapse-item" href="/settlement/search">View Transactions</a>
+                </div>
+            </div>
+            <hr class="sidebar-divider my-0">
     </ul>
     <!-- End of Sidebar -->
 
