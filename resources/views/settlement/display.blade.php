@@ -33,7 +33,9 @@
                                             <td hidden>{{$values->issuerId}}</td>
                                             <td>{{$values->sumAmountByAcquirer}}</td>
                                             <td>{{$values->sumAmountByIssuer}}</td>
-                                            <td>{{$values->amount}}</td>
+                                            <td>@php
+                                                    echo $cash_back = money_format('%i', $values->amount/100);
+                                                @endphp</td>
                                             <td>{{$values->fee}}</td>
                                             <td>{{$values->settlementAmount}}</td>
                                             <td>{{$values->description}}</td>

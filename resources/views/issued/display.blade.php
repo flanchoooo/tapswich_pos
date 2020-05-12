@@ -44,7 +44,9 @@
                                             <td hidden>{{$values->switchFee}}</td>
                                             <td hidden>{{$values->acquirerFee}}</td>
                                             <td hidden>{{$values->issuerFee}}</td>
-                                            <td>{{$values->amount}}</td>
+                                            <td>@php
+                                                    echo $cash_back = money_format('%i', $values->amount/100);
+                                                @endphp</td>
                                     @endforeach
                                     </tbody>
                                 </table>
