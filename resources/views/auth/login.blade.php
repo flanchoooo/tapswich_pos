@@ -22,7 +22,7 @@
 
                                     }
                                 @endphp
-                                <a class="text-center" href="index.html"> <h4>{{env('SYS_NAME')}}</h4></a>
+                                <div style="text-align: center;"><h4>Tapswitch Portal</h4></div>
 
                                 <form class="mt-5 mb-5 login-input" method="POST" action="{{ route('login') }}">
                                     @csrf
@@ -46,13 +46,7 @@
                                     <button type="submit" class="btn btn-primary btn-user btn-block">Sign In</button>
                                 </form>
                                 <p class="mt-5 login-form__footer">
-                                    <a class="btn btn-link" href="{{ route('register') }}">
-                                        {{ __('Dont have and account ?') }}
-                                    </a>    @if (Route::has('password.request'))
-                                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                                            {{ __('Forgot Your Password?') }}
-                                        </a>
-                                    @endif</p>
+                                  </p>
                             </div>
                         </div>
                     </div>
