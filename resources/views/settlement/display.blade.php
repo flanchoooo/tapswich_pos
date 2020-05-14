@@ -31,8 +31,12 @@
                                             <td>{{$values->datetime}}</td>
                                             <td hidden>{{$values->acquirerId}}</td>
                                             <td hidden>{{$values->issuerId}}</td>
-                                            <td>{{$values->sumAmountByAcquirer}}</td>
-                                            <td>{{$values->sumAmountByIssuer}}</td>
+                                            <td>@php
+                                                    echo $cash_back = money_format('%i', $values->sumAmountByAcquirer);
+                                                @endphp</td>
+                                            <td>@php
+                                                    echo $cash_back = money_format('%i', $values->sumAmountByIssuer);
+                                                @endphp</td>
                                             <td>@php
                                                     echo $cash_back = money_format('%i', $values->amount/100);
                                                 @endphp</td>

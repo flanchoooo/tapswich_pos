@@ -41,9 +41,15 @@
                                             </td>
                                             <td>{{$values->transactionType}}</td>
                                             <td>{{$values->cardPan}}</td>
-                                            <td hidden>{{$values->switchFee}}</td>
-                                            <td hidden>{{$values->acquirerFee}}</td>
-                                            <td hidden>{{$values->issuerFee}}</td>
+                                            <td hidden>@php
+                                                    echo $cash_back = money_format('%i', $values->switchFee);
+                                                @endphp</td>
+                                            <td hidden>@php
+                                                    echo $cash_back = money_format('%i', $values->acquirerFee);
+                                                @endphp</td>
+                                            <td hidden>@php
+                                                    echo $cash_back = money_format('%i', $values->issuerFee);
+                                                @endphp</td>
                                             <td>@php
                                                     echo $cash_back = money_format('%i', $values->amount/100);
                                             @endphp</td>

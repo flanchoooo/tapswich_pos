@@ -31,7 +31,7 @@ class AcquiredTransactionsController extends Controller
                     'fromDate'    => $request->start_date,
                     'toDate'      => $request->end_date,
                     'page'        => 0,
-                    'size'        => 100,
+                    'size'        => 20000,
                 ],
             ]);
 
