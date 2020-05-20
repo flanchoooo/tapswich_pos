@@ -17,7 +17,6 @@ class SettlementController extends Controller
     public  function display(Request $request){
         session_start();
          if(!isset($_SESSION["token"])){
-             Auth::logout();
              return redirect('/login');
          }
         try {
