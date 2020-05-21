@@ -32,13 +32,17 @@
                                             <td hidden>{{$values->acquirerId}}</td>
                                             <td hidden>{{$values->issuerId}}</td>
                                             <td>@php
-                                                    echo $cash_back = money_format('%i', $values->sumAmountByAcquirer/100);
+                                                   // echo $cash_back = money_format('%i', $values->sumAmountByAcquirer/100);
+                                                    echo $cash_back =  number_format((float)$values->sumAmountByAcquirer/100, 2, '.', '');
                                                 @endphp</td>
                                             <td>@php
-                                                    echo $cash_back = money_format('%i', $values->sumAmountByIssuer /100);
+                                                   // echo $cash_back = money_format('%i', $values->sumAmountByIssuer /100);
+                                                    echo $cash_back =  number_format((float)$values->sumAmountByIssuer/100, 2, '.', '');
+
                                                 @endphp</td>
                                             <td>@php
-                                                    echo $cash_back = money_format('%i', $values->amount/100);
+                                                    //echo $cash_back = money_format('%i', $values->amount/100);
+                                                    echo $cash_back =  number_format((float)$values->amount/100, 2, '.', '');
                                                 @endphp</td>
                                             <td>{{$values->fee}}</td>
                                             <td>{{$values->settlementAmount /100}}</td>

@@ -59,7 +59,6 @@
             <div>
                 <h5>TAPSWITCH</h5>
             </div>
-            <div class="sidebar-brand-text mx-3">{{env('SYS_NAME')}}</div>
         </a>
 
         <br>
@@ -88,8 +87,8 @@
                     <a class="collapse-item" href="/issued/search">View Transactions</a>
                 </div>
             </div>
-            <hr class="sidebar-divider my-0">
 
+            <hr class="sidebar-divider my-0">
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#dash_" aria-expanded="true" aria-controls="collapseTwo">
                 <span>Net Settlement Reports</span>
             </a>
@@ -100,6 +99,18 @@
                 </div>
             </div>
             <hr class="sidebar-divider my-0">
+
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#dash_1" aria-expanded="true" aria-controls="collapseTwo">
+                <span>Merchant Settlement Report</span>
+            </a>
+            <div id="dash_1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Merchant Report</h6>
+                    <a class="collapse-item" href="/merchants/search">View Transactions</a>
+                </div>
+            </div>
+            <hr class="sidebar-divider my-0">
+
     </ul>
     <!-- End of Sidebar -->
 

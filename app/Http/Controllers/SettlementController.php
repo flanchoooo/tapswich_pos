@@ -34,7 +34,7 @@ class SettlementController extends Controller
                 ],
             ]);
 
-            $records = $result->getBody()->getContents();
+           return $records = $result->getBody()->getContents();
             $nullResponse = json_decode($records);
              if($nullResponse->numberOfElements == 0){
                 session()->flash('acq_message', 'No search result');

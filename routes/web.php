@@ -26,6 +26,8 @@ Route::any('/issued/display','IssuedController@display');
 Route::any('/settlement/search','SettlementController@view');
 Route::any('/settlement/display','SettlementController@display');
 
+Route::any('/merchants/search','MerchantsController@view');
+Route::any('/merchants/display','MerchantsController@display');
 
 
 Auth::routes();

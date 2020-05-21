@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="398121ae-2d95-48fb-b03d-fb80590d7393" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+    </configs>
+  </component>
+</project>

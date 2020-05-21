@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Acquired Transaction Report</h4>
+                        <h4 class="card-title">Acquired Transactions Report</h4>
                         <hr>
                         <div class="table-responsive">
                             <table id='example' class="table zero-configuration">
@@ -42,16 +42,23 @@
                                             <td>{{$values->transactionType}}</td>
                                             <td>{{$values->cardPan}}</td>
                                             <td hidden>@php
-                                                    echo $cash_back = money_format('%i', $values->switchFee /100);
+                                                   // echo $cash_back = asDollars($values->switchFee /100);
+                                                    echo $cash_back =  number_format((float)$values->switchFee/100, 2, '.', '');
                                                 @endphp</td>
                                             <td hidden>@php
-                                                    echo $cash_back = money_format('%i', $values->acquirerFee /100);
+                                                   // echo $cash_back = asDollars($values->acquirerFee /100);
+                                                    echo $cash_back =  number_format((float)$values->acquirerFee/100, 2, '.', '');
                                                 @endphp</td>
                                             <td hidden>@php
-                                                    echo $cash_back = money_format('%i', $values->issuerFee /100);
+                                                   // echo $cash_back = asDollars($values->issuerFee /100);
+                                                    echo $cash_back =  number_format((float)$values->issuerFee/100, 2, '.', '');
+
                                                 @endphp</td>
                                             <td>@php
-                                                    echo $cash_back = money_format('%i', $values->amount /100);
+                                                   // echo $cash_back = asDollars($values->amount /100);
+                                                    echo $cash_back =  number_format((float)$values->amount/100, 2, '.', '');
+
+
                                             @endphp</td>
                                     @endforeach
                                     </tbody>
