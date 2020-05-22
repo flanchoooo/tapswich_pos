@@ -4,6 +4,9 @@
     <configs>
       <sshConfig authType="PASSWORD" host="144.91.64.119" id="398121ae-2d95-48fb-b03d-fb80590d7393" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
       <sshConfig authType="PASSWORD" host="144.91.64.119" id="a721e7b8-5d29-4946-b81d-b12dbaa1d9b3" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="696b1251-33ba-4ab7-a3c7-7f03dd36fc11" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="98f2374c-b9c5-4484-819c-dafa7d8098a8" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="725e95bd-362e-4937-af0e-3aa64253b0b4" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
     </configs>
   </component>
 </project>

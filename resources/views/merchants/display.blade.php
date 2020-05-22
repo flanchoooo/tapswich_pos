@@ -24,7 +24,7 @@
                                     <tbody>
                                     @foreach($records as $values)
                                         <tr>
-                                            <td>{{$values->acquirer}}</td>
+                                            <td>{{$values->acquirerName}}</td>
                                             <td>{{$values->merchant}}</td>
                                             <td>{{$values->merchantId}}</td>
                                             <td>{{$values-> transactionCount}}</td>

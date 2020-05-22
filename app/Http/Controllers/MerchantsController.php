@@ -19,9 +19,11 @@ class MerchantsController extends Controller
         if(!isset($_SESSION["token"])){
             return redirect('/login');
         }
+
+
         try {
             $client = new Client();
-            $result = $client->post('http://144.91.64.119:9002/tapswitch/breakdown/period', [
+            $result = $client->post('localhost:9002/tapswitch/breakdown/period', [
                 'headers' => [
                     'Authorization' =>$_SESSION["token"],
                     'Content-type' => 'application/json',],
