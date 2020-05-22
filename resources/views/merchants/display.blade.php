@@ -16,6 +16,7 @@
                                         <th>Merchant</th>
                                         <th>Merchant ID</th>
                                         <th>Transaction Count</th>
+                                        <th>Type</th>
                                         <th>Total</th>
                                         <th>Acquirer Fee</th>
                                         <th>Issuer Fee</th>
@@ -28,11 +29,12 @@
                                             <td>{{$values->merchant}}</td>
                                             <td>{{$values->merchantId}}</td>
                                             <td>{{$values-> transactionCount}}</td>
+                                            <td>{{$values-> transactionType}}</td>
                                             <td>{{ number_format((float)$values->total/100, 2, '.', '')}}</td>
                                             <td>{{ number_format((float)$values->acquirerFees/100, 2, '.', '')}}</td>
                                             <td>{{ number_format((float)$values->issuerFees/100, 2, '.', '')}}</td>
                                     @endforeach
-                                    </tbody>Mer
+                                    </tbody>
                                 </table>
                             </table>
                         </div>
