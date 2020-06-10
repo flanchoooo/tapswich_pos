@@ -23,7 +23,7 @@ class MerchantsController extends Controller
 
         try {
             $client = new Client();
-            $result = $client->post('localhost:9002/tapswitch/breakdown/period', [
+            $result = $client->post('144.91.64.119:9002/tapswitch/breakdown/period', [
                 'headers' => [
                     'Authorization' =>$_SESSION["token"],
                     'Content-type' => 'application/json',],
@@ -36,7 +36,7 @@ class MerchantsController extends Controller
                 ],
             ]);
 
-            $records = $result->getBody()->getContents();
+             $records = $result->getBody()->getContents();
             $nullResponse = json_decode($records);
             if($nullResponse->numberOfElements == 0){
                 session()->flash('acq_message', 'No search result');

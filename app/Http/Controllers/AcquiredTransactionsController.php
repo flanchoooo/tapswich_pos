@@ -21,7 +21,7 @@ class AcquiredTransactionsController extends Controller
          }
         try {
             $client = new Client();
-            $result = $client->post('localhost:9002/tapswitch/acquirer/period', [
+            $result = $client->post('http://144.91.64.119:9002/tapswitch/acquirer/period', [
                 'headers' => [
                     'Authorization' =>$_SESSION["token"],
                     'Content-type' => 'application/json',],
