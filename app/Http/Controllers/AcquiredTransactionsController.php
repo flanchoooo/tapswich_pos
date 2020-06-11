@@ -21,7 +21,7 @@ class AcquiredTransactionsController extends Controller
          }
         try {
             $client = new Client();
-            $result = $client->post('http://144.91.64.119:9002/tapswitch/acquirer/period', [
+            $result = $client->post('http://144.91.64.119:9002/tapswitch/acquirer/period/v1', [
                 'headers' => [
                     'Authorization' =>$_SESSION["token"],
                     'Content-type' => 'application/json',],
@@ -44,7 +44,8 @@ class AcquiredTransactionsController extends Controller
 
            return view('acquired.display')->with('records',$nullResponse->content);
         }catch (\Exception $exception){
-            session()->flash('acq_message', 'Failed to process request please contact system administrator.');
+            $message = "Please logout and try again. Error message :".$exception->getMessage();
+            session()->flash('acq_message',$message);
             return redirect()->back();
         }
 

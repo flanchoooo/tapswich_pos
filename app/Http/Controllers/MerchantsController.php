@@ -32,7 +32,7 @@ class MerchantsController extends Controller
                     'fromDate'    => $request->start_date,
                     'toDate'      => $request->end_date,
                     'page'        => 0,
-                    'size'        => 20000,
+                    'size'        => 1000000,
                 ],
             ]);
 
@@ -44,7 +44,8 @@ class MerchantsController extends Controller
             }
             return view('merchants.display')->with('records',$nullResponse->content);
         }catch (\Exception $exception){
-            session()->flash('acq_message', $exception->getMessage());
+            $message = "Please logout and try again. Error message :".$exception->getMessage();
+            session()->flash('acq_message',$message);
             return redirect()->back();
         }
 

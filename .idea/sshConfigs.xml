@@ -7,6 +7,15 @@
       <sshConfig authType="PASSWORD" host="144.91.64.119" id="696b1251-33ba-4ab7-a3c7-7f03dd36fc11" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
       <sshConfig authType="PASSWORD" host="144.91.64.119" id="98f2374c-b9c5-4484-819c-dafa7d8098a8" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
       <sshConfig authType="PASSWORD" host="144.91.64.119" id="725e95bd-362e-4937-af0e-3aa64253b0b4" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="eb820a1a-8b02-4ee9-a255-eabc8244de8d" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="aad11b1c-0232-4f12-838b-821fc481306c" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="89797a86-cb68-45d1-8e8f-546b181a0a08" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="ce0e7b9a-dae4-48ba-9e19-9b068f4c7922" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="86bcb5d8-fe99-49b6-9dd6-5e1c414d011a" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="bccc8e14-f9f1-4173-a60b-9375579f3b23" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="9356b48e-e262-4c0a-87f0-8b71808ac7e7" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="267c7fae-04b8-4631-b45b-e6168134a87a" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="144.91.64.119" id="9bb12a32-601d-4ab2-a829-8da4175f9963" port="2202" customName="Tapswitch" nameFormat="CUSTOM" />
     </configs>
   </component>
 </project>

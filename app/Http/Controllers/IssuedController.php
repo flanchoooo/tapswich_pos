@@ -21,7 +21,7 @@ class IssuedController extends Controller
          }
         try {
             $client = new Client();
-            $result = $client->post('http://144.91.64.119:9002/tapswitch/issuer/period', [
+            $result = $client->post('http://144.91.64.119:9002/tapswitch/issuer/period/v1', [
                 'headers' => [
                     'Authorization' =>$_SESSION["token"],
                     'Content-type' => 'application/json',],
@@ -30,7 +30,8 @@ class IssuedController extends Controller
                     'fromDate'    => $request->start_date,
                     'toDate'      => $request->end_date,
                     'page'        => 0,
-                    'size'        => 20000,
+                    'size'        =>100000
+                    ,
                 ],
             ]);
 
@@ -44,7 +45,8 @@ class IssuedController extends Controller
 
            return view('issued.display')->with('records',$nullResponse->content);
         }catch (\Exception $exception){
-            session()->flash('acq_message', 'Failed to process request please contact system administrator.');
+            $message = "Please logout and try again. Error message :".$exception->getMessage();
+            session()->flash('acq_message',$message);
             return redirect()->back();
         }
 

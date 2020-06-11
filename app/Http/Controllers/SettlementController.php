@@ -21,7 +21,7 @@ class SettlementController extends Controller
          }
         try {
             $client = new Client();
-            $result = $client->post('http://144.91.64.119:9002/tapswitch/nettsettlement/period', [
+            $result = $client->post('http://144.91.64.119:9002/tapswitch/nettsettlement/period/v21', [
                 'headers' => [
                     'Authorization' =>$_SESSION["token"],
                     'Content-type' => 'application/json',],
@@ -30,7 +30,7 @@ class SettlementController extends Controller
                     'fromDate'    => $request->start_date,
                     'toDate'      => $request->end_date,
                     'page'        => 0,
-                    'size'        => 20000,
+                    'size'        => 1000000,
                 ],
             ]);
 
@@ -42,8 +42,9 @@ class SettlementController extends Controller
              }
            return view('settlement.display')->with('records',$nullResponse->content);
         }catch (\Exception $exception){
-            session()->flash('acq_message', 'Failed to process request please contact system administrator.');
-            return redirect()->back();
+             $message = "Please logout and try again. Error message :".$exception->getMessage();
+             session()->flash('acq_message',$message);
+             return redirect()->back();
         }
 
 
