@@ -21,7 +21,7 @@ class SettlementController extends Controller
          }
         try {
             $client = new Client();
-            $result = $client->post('http://144.91.64.119:9002/tapswitch/nettsettlement/period/v21', [
+            $result = $client->post('http://144.91.64.119:9002/tapswitch/nettsettlement/period/v1', [
                 'headers' => [
                     'Authorization' =>$_SESSION["token"],
                     'Content-type' => 'application/json',],
